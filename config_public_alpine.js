@@ -15,5 +15,7 @@ export const opts = {
 	// User id (using non-root user for personal use)
 	uid: 1000,
 	// Group id
-	gid: 1000
+	gid: 1000,
+	// Set a custom env variable so I can tell I'm running inside webvm
+	env: ["WEBVM=1", "TERM=xterm-256color", "HOME=/home/user", "USER=user"]
 };
