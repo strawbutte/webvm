@@ -7,13 +7,13 @@ export const printIntro = false;
 // Is a graphical display needed
 export const needsDisplay = true;
 // Executable full path (Required)
-export const cmd = "/sbin/init";
+export const cmd = "/bin/login";
 // Arguments, as an array (Required)
-export const args = [];
+export const args = ["-f", "user"];
 // Optional extra parameters
 export const opts = {
-	// User id
-	uid: 0,
+	// User id (using non-root user for personal use)
+	uid: 1000,
 	// Group id
-	gid: 0
+	gid: 1000
 };
