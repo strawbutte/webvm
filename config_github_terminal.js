@@ -13,7 +13,7 @@ export const args = ARGS; // Default: ["--login"];
 // Optional extra parameters
 export const opts = {
 	// Environment variables
-	env: ENV, // Default: ["HOME=/home/user", "TERM=xterm", "USER=user", "SHELL=/bin/bash", "EDITOR=vim", "LANG=en_US.UTF-8", "LC_ALL=C"],
+	env: ENV, // Default: ["HOME=/home/user", "TERM=xterm", "USER=user", "SHELL=/bin/bash", "EDITOR=nano", "LANG=en_US.UTF-8", "LC_ALL=C"],
 	// Current working directory
 	cwd: CWD, // Default: "/home/user",
 	// User id
@@ -22,5 +22,5 @@ export const opts = {
 	gid: 1000
 };
 
-// NOTE: if you want to change the default editor from vim to nano, update the ENV
-// array to include "EDITOR=nano" instead of "EDITOR=vim"
+// NOTE: if you want to change the default editor from nano to vim, update the ENV
+// array to include "EDITOR=vim" instead of "EDITOR=nano"
