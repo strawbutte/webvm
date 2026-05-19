@@ -21,3 +21,6 @@ export const opts = {
 	// Group id
 	gid: 1000
 };
+
+// NOTE: if you want to change the default editor from vim to nano, update the ENV
+// array to include "EDITOR=nano" instead of "EDITOR=vim"
