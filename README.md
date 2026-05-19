@@ -62,8 +62,11 @@ WebVM now has access to all machines in your Tailscale network!
 To access the public internet from WebVM, set up an **Exit Node** on another device in your Tailscale network:
 
 1. Follow the [Tailscale Exit Node quickstart](https://tailscale.com/kb/1408/quick-guide-exit-nodes?tab=linux) (sections: "Advertise a device as an exit node")
-2. WebVM automatically uses the exit node once advertised
+2. WebVM
 
-### Using an Auth Key
+## Personal Notes
 
-As an alternative to interactive login, add your Tailscale a
+> **Learning log** — Things I've figured out while poking around this codebase:
+> - CheerpX fetches disk image chunks on demand over HTTP, which is why the first run feels slow — it's lazily loading only what it needs.
+> - The `curl` trick for connectivity checks is genuinely useful; keep that in mind for other sandboxed environments too.
+> - Worth reading the [CheerpX docs](https://cheerpx.io/docs) alongside this repo for context on the virtualization layer.
