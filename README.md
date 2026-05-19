@@ -59,14 +59,10 @@ WebVM now has access to all machines in your Tailscale network!
 > [!TIP]
 > On slower connections there may be a short delay before initialisation. Connection status is shown as a colored dot on the button: orange = local network, green = global/internet. The button text shows your Tailscale IP address once connected.
 
+> [!NOTE]
+> **Personal note:** I've found that using a Raspberry Pi as an exit node works great for this — cheap, always-on, and easy to set up.
+
 To access the public internet from WebVM, set up an **Exit Node** on another device in your Tailscale network:
 
 1. Follow the [Tailscale Exit Node quickstart](https://tailscale.com/kb/1408/quick-guide-exit-nodes?tab=linux) (sections: "Advertise a device as an exit node")
 2. WebVM
-
-## Personal Notes
-
-> **Learning log** — Things I've figured out while poking around this codebase:
-> - CheerpX fetches disk image chunks on demand over HTTP, which is why the first run feels slow — it's lazily loading only what it needs.
-> - The `curl` trick for connectivity checks is genuinely useful; keep that in mind for other sandboxed environments too.
-> - Worth reading the [CheerpX docs](https://cheerpx.io/docs) alongside this repo for context on the virtualization layer.
