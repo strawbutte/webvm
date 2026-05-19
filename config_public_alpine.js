@@ -17,5 +17,5 @@ export const opts = {
 	// Group id
 	gid: 1000,
 	// Set a custom env variable so I can tell I'm running inside webvm
-	env: ["WEBVM=1", "TERM=xterm-256color", "HOME=/home/user", "USER=user"]
+	env: ["WEBVM=1", "TERM=xterm-256color", "HOME=/home/user", "USER=user", "EDITOR=nano", "PAGER=less"]
 };
